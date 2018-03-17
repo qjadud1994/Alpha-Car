@@ -33,7 +33,7 @@ def Conv_bottleneck(inputs, count, side_depth, middle_depth, pooling=True):
     x = Conv2D(side_depth, (3, 3), strides=(1, 1), padding='same', use_bias=False)(inputs)
     x = BatchNormalization()(x)
     x = LeakyReLU(alpha=0.1)(x)
-    x = Conv2D(middle_depth, (3, 3), strides=(1, 1), padding='same', use_bias=False)(x)
+    x = Conv2D(middle_depth, (1, 1), strides=(1, 1), padding='same', use_bias=False)(x)
     x = BatchNormalization()(x)
     x = LeakyReLU(alpha=0.1)(x)
     x = Conv2D(side_depth, (3, 3), strides=(1, 1), padding='same', use_bias=False)(x)
