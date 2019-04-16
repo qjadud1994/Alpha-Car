@@ -10,6 +10,7 @@
 ### What is Alpha-Car?
 - 2017 한이음 공모전에 나간 Alpha-car팀의 '딥러닝 기반 자율 주행 버스 운행 시스템' 이다.
 - Deep Learning, OpenCV, Raspberry pi, RFID, 초음파 센서 등을 이용하여 구현하였다.
+- AlphaGo + Car
 
 
 ### Implement Details
