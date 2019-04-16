@@ -39,6 +39,9 @@
   - DarkNet의 BottleNeck 부분 잘못사용하고 있었음ㅜ
   - 논문에서 언급한 Multi-scale Training이나 Warm-up training 같은 성능에 큰 이슈가 될 수 있는 테크닉들을 사용하지 않음...
   - 모바일/임베디드 환경에서 연산 속도를 올릴 수 있는 Compression, Quantization 같은 Optimization 기법들을 사용했다면 더 좋았을듯. (TensorRT나 Tensorflow Lite 사용 권장)
+- 신호등 색상 판단을 딥러닝으로 하지 못했다.
+  - 별도의 Class로 학습하기에는 labeling이 안되어있거나 그 수가 매우 적었다.
+  - 임시로 RGB의 threshold로 Green/Red를 판단하긴 했는데, 카메라 환경 변화에 매우 민감해서 잘못된 판단이 일어난다.
 - 인식된 물체에 따른 제어 알고리즘이 매우 부실함.
   - 딥러닝으로 물체가 어디있는지 위치(좌표)는 알지만, 차량과의 거리나 각도 등을 제대로 알지 못한다. (2D perspective image 이기 때문)
   - 우선 임시로 y좌표 값으로 거리를 판단하는 식으로 사용하긴 했지만, 제대로 될리가 없다..
